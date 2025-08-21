@@ -4,7 +4,7 @@ import CustomHeader from "@/components/CustomHeader";
 
 export default function RootLayout() {
   return (
-    <Stack screenOptions={{ headerShown: true }}>
+    <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen
         name="index"
         options={{
