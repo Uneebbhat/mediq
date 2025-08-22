@@ -1,28 +1,29 @@
 import Colors from "@/constants/Colors";
-import SignupForm from "@/modules/auth/components/SignupForm";
+import LoginForm from "@/modules/auth/components/LoginForm";
 
 import { Link } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 
-export default function SignupScreen() {
+export default function LoginScreen() {
   return (
     <View style={styles.container}>
       <View>
-        <View style={styles.signupHeadingContainer}>
-          <Text style={styles.signupHeadingText}>Signup as Doctor</Text>
-          <Text style={styles.signupBody}>
-            Create an account an start managing your patients seamlessly
+        <View style={styles.loginHeadingContainer}>
+          <Text style={styles.loginHeadingText}>Welcome Back 🙌</Text>
+          <Text style={styles.loginBody}>
+            Your patients are waiting, login again and start managing your
+            patients
           </Text>
         </View>
 
-        <SignupForm />
+        <LoginForm />
       </View>
 
       <View>
-        <Text style={styles.loginLinkText}>
-          Already have an account?{" "}
-          <Link href={"/auth/login"} style={styles.loginLink}>
-            Login
+        <Text style={styles.signupLinkText}>
+          Don't have an account?{" "}
+          <Link href={"/auth/signup"} style={styles.signupLink}>
+            Signup
           </Link>
         </Text>
       </View>
@@ -39,24 +40,24 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     backgroundColor: Colors.white,
   },
-  signupHeadingContainer: {
+  loginHeadingContainer: {
     gap: 12,
   },
-  signupHeadingText: {
+  loginHeadingText: {
     fontSize: 32,
     fontWeight: "bold",
     textAlign: "center",
   },
-  signupBody: {
+  loginBody: {
     fontSize: 16,
     fontWeight: "500",
     textAlign: "center",
   },
-  loginLinkText: {
+  signupLinkText: {
     textAlign: "center",
     fontSize: 16,
   },
-  loginLink: {
+  signupLink: {
     textDecorationLine: "underline",
     fontWeight: "600",
   },
