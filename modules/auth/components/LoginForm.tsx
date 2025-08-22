@@ -4,9 +4,8 @@ import Input from "@/components/input";
 import { useState } from "react";
 import { KeyboardAvoidingView, StyleSheet, Text, View } from "react-native";
 
-const SignupForm = () => {
+const LoginForm = () => {
   const [formData, setFormData] = useState({
-    username: "",
     email: "",
     password: "",
   });
@@ -24,18 +23,7 @@ const SignupForm = () => {
 
   return (
     <KeyboardAvoidingView behavior="padding">
-      <View style={styles.signupFormContainer}>
-        {/* Username */}
-        <View>
-          <Text>Username</Text>
-          <Input
-            placeholder="Dr. Usman Malik"
-            keyboardType="default"
-            value={formData.username}
-            onChangeText={(text: string) => handleChange("username", text)}
-          />
-        </View>
-
+      <View style={styles.loginFormContainer}>
         {/* Email */}
         <View>
           <Text>Email</Text>
@@ -61,12 +49,12 @@ const SignupForm = () => {
 
         {/* Buttons */}
         <View>
-          <Button title="Signup" onPress={handleSubmit} />
+          <Button title="Login" onPress={handleSubmit} />
           <Button
             title="Google"
             variant="secondary"
             customIcon={require("@/assets/images/google-icon.png")}
-            onPress={() => console.log("Google Signup")}
+            onPress={() => console.log("Google Login")}
           />
         </View>
       </View>
@@ -75,10 +63,10 @@ const SignupForm = () => {
 };
 
 const styles = StyleSheet.create({
-  signupFormContainer: {
+  loginFormContainer: {
     gap: 12,
     marginTop: 32,
   },
 });
 
-export default SignupForm;
+export default LoginForm;
