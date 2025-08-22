@@ -1,5 +1,4 @@
-import Button from "@/components/button";
-import Input from "@/components/input";
+import { Link } from "expo-router";
 import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
@@ -7,9 +6,9 @@ export default function Index() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
-        <Text style={styles.title}>My first app!</Text>
-        <Input placeholder="Email" secureTextEntry />
-        <Button title="Signup" />
+        <Link href={"/auth/signup"}>
+          <Text style={styles.title}>Signup</Text>
+        </Link>
       </View>
     </SafeAreaView>
   );
