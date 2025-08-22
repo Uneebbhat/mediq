@@ -1,6 +1,5 @@
-import { Stack } from "expo-router";
-
 import CustomHeader from "@/components/CustomHeader";
+import { Stack } from "expo-router";
 
 export default function RootLayout() {
   return (
@@ -11,6 +10,7 @@ export default function RootLayout() {
           header: () => <CustomHeader title="Home" />,
         }}
       />
+      <Stack.Screen name="auth" />
     </Stack>
   );
 }
