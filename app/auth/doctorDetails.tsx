@@ -1,21 +1,20 @@
 import Colors from "@/constants/Colors";
-import LoginForm from "@/modules/auth/components/LoginForm";
+import DoctorDetailsForm from "@/modules/auth/components/DoctorDetailsForm";
 
 import { StyleSheet, Text, View } from "react-native";
 
-export default function LoginScreen() {
+export default function DoctorDetailsScreen() {
   return (
     <View style={styles.container}>
       <View>
         <View style={styles.authHeadingContainer}>
-          <Text style={styles.authHeadingText}>Welcome Back 🙌</Text>
+          <Text style={styles.authHeadingText}>Enter Details</Text>
           <Text style={styles.authBody}>
             Your patients are waiting, login again and start managing your
             patients
           </Text>
         </View>
-
-        <LoginForm />
+        <DoctorDetailsForm />
       </View>
     </View>
   );

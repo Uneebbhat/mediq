@@ -8,9 +8,9 @@ export default function SignupScreen() {
   return (
     <View style={styles.container}>
       <View>
-        <View style={styles.signupHeadingContainer}>
-          <Text style={styles.signupHeadingText}>Signup as Doctor</Text>
-          <Text style={styles.signupBody}>
+        <View style={styles.authHeadingContainer}>
+          <Text style={styles.authHeadingText}>Signup as Doctor</Text>
+          <Text style={styles.authBody}>
             Create an account an start managing your patients seamlessly
           </Text>
         </View>
@@ -39,15 +39,15 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     backgroundColor: Colors.white,
   },
-  signupHeadingContainer: {
+  authHeadingContainer: {
     gap: 12,
   },
-  signupHeadingText: {
+  authHeadingText: {
     fontSize: 32,
     fontWeight: "bold",
     textAlign: "center",
   },
-  signupBody: {
+  authBody: {
     fontSize: 16,
     fontWeight: "500",
     textAlign: "center",
